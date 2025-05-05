@@ -3,7 +3,7 @@ export const PickArena = () => {
   const navigate = useNavigate()
   const handleClick = ()=>{
 
-    navigate("/championship-bracket")
+    navigate("/bracket")
   }
   return (
     <section>

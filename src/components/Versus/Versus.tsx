@@ -9,7 +9,7 @@ export const Versus = () => {
     <section>
       
       <h1>Meet your oponent</h1>
-      <button onClick={()=>navigate("/championship-bracket")}>Back</button>
+      <button onClick={()=>navigate("/bracket")}>Back</button>
       <button onClick={handleClick}>Fight</button>
     </section>
   )

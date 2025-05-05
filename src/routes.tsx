@@ -18,7 +18,7 @@ export const routes = [
     element: <Battle />,
   },
   {
-    path: '/championship-bracket',
+    path: '/bracket',
     element: <Bracket />,
   },
   {
