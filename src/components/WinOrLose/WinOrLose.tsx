@@ -9,6 +9,7 @@ export const WinOrLose = () => {
     <section>
       
       <h1>WinOrLose</h1>
+      <button onClick={()=>navigate("/battle")}>Next fight</button>
       <button onClick={handleClick}>Start again</button>
     </section>
   )
