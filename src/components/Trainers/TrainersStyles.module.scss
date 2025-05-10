@@ -1,0 +1,34 @@
+.Trainers{
+  display:flex;
+  gap: 4px;
+  button{
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: .6s cubic-bezier(0.6, 0, 0.02, 1.01);
+    width: 50px;
+    opacity: .3;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    img {
+      transition: .6s cubic-bezier(0.6, 0, 0.02, 1.01);
+      transform: scale(1);
+    }
+    &:hover{
+      width: 90px;
+      opacity: .7;
+      img {
+        transform: scale(1.1);
+      }
+    }
+    &.selected {
+      width: 301px;
+      opacity: 1;
+      img {
+        transform: scale(1.4);
+      }
+    }
+  }
+}

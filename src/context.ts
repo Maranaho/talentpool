@@ -1,23 +1,23 @@
 import { createContext, type Dispatch } from "react"
 
 interface State {
-  someBoolean: boolean
+  selectedTrainer: string
 }
 
 type Action =
-  | { type: "SOME_ACTION_TYPE"; payload: boolean }
+  | { type: "SET_TRAINER"; payload: string }
 
 const initialState: State = {
-  someBoolean: false,
+  selectedTrainer: "greyman",
 }
 
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
 
-    case "SOME_ACTION_TYPE":
+    case "SET_TRAINER":
       return {
         ...state,
-        someBoolean: action.payload,
+        selectedTrainer: action.payload,
       }
 
     default:
