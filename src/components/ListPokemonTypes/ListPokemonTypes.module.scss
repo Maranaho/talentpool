@@ -1,0 +1,21 @@
+.ListPokemonTypes {
+  display: inline-grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 1px;
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    overflow: hidden;
+    opacity: 1;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    &:hover{ opacity: .8;}
+  }
+  img {
+    border-radius: 3px;
+    width: 100px;
+    height: 100px;
+  }
+} 
