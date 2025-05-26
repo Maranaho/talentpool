@@ -1,1 +1,0 @@
-export { ListPokemonTypes } from "./ListPokemonTypes"

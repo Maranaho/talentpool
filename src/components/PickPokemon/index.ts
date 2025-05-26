@@ -1,1 +1,0 @@
-export { PickPokemon } from "./PickPokemon"

@@ -26,12 +26,12 @@ const reducer = (state: State, action: Action): State => {
 }
 
 const defaultDispatch: Dispatch<Action> = () => {
-  throw new Error("dispatch must be used within a PokemonProvider")
+  throw new Error("dispatch must be used within a TalentPoolProvider")
 }
 
-const PokemonContext = createContext<{
+const TalentPoolContext = createContext<{
   state: State
   dispatch: Dispatch<Action>
 }>({ state: initialState, dispatch: defaultDispatch })
 
-export { initialState, reducer, PokemonContext }
+export { initialState, reducer, TalentPoolContext }
