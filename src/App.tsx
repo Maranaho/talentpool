@@ -3,16 +3,15 @@ import { routes } from './routes'
 
 import { useReducer } from "react"
 import { TalentPoolContext, reducer, initialState } from "./context"
-import { Button } from "./components/Button"
-import { Icon } from "./components/Icon"
+import { SideNav } from "./components/SideNav"
+import styles from "./App.module.scss"
 export const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   return (
     <TalentPoolContext.Provider value={{ state, dispatch }}>
-      <main>
-        <Button>Hey</Button>
-        <Icon />
+      <main className={styles.App}>
+        <SideNav/>
         <Routes>
         {routes.map(({ path, element }) => (
           <Route key={path} path={path} element={element} />

@@ -1,0 +1,10 @@
+.SideNav{
+  display: flex;
+  flex-direction: column;
+  gap:90px;
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+  }
+}
