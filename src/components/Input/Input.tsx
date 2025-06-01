@@ -3,7 +3,7 @@ import styles from "./Input.module.scss"
 export type Value = string | number | undefined
 export type OnChange = ChangeEventHandler<HTMLInputElement>
 
-interface InputProps {
+export interface InputProps {
   value: Value
   onChange: OnChange
   placeholder?:string

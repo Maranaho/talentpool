@@ -1,13 +1,16 @@
 import { useState, type ChangeEvent } from "react"
-import { Input, type Value } from "../Input"
+import type { Value } from "../Input"
+import { TextField} from "../TextField"
 
 export const DashBoard = () => {
 
   const [value,setValue] = useState<Value>(undefined)
   return (
   <section>
-    <Input
+    <TextField
+      label="First name"
       value={value}
+      error="Wrong name"
       onChange={(event:ChangeEvent<HTMLInputElement>)=>setValue(event.target.value)}
     />
   </section>

@@ -1,0 +1,7 @@
+@import "../../ds-tokens.scss";
+
+.ErrorMsg {
+  display: flex;
+  align-items: center;
+  color:$error;
+}

@@ -5,6 +5,7 @@ export const colors = {
   lime:"#6FFFC8",
   fade:"#B1B8C4",
   black:"#181D27",
+  error:"#f15f5f",
 }
 
 export type Color =
@@ -13,4 +14,5 @@ export type Color =
 "marine" |
 "lime" |
 "fade" |
-"black"
+"black"|
+"error"
