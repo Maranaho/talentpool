@@ -18,6 +18,7 @@ export const Font:FC<FontProps> = ({
     case "body2": return <p className={styles.body2}>{children}</p>
     case "body3": return <p className={styles.body3}>{children}</p>
     case "span": return <span>{children}</span>
+    case "small": return <small>{children}</small>
     default: return <p>{children}</p>
   }
 }
