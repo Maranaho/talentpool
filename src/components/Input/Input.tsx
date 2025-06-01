@@ -8,17 +8,19 @@ export interface InputProps {
   onChange: OnChange
   placeholder?:string
   disabled?:boolean
+  error?:string
 }
 export const Input:FC<InputProps> = ({
   value,
   placeholder = "Type...",
   onChange,
   disabled,
+  error,
 }) => {
 
   return (  
   <article
-    className={styles.Input}
+    className={`${styles.Input} ${error?styles.hasError:""}`}
   >
      <input
       placeholder={placeholder}

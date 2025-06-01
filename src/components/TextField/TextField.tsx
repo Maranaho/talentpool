@@ -7,7 +7,6 @@ import styles from "./TextField.module.scss"
 
 interface TextFieldProps extends InputProps {
   label:string
-  error?:string
 }
 export const TextField:FC<TextFieldProps> = ({
   label,
@@ -16,9 +15,9 @@ export const TextField:FC<TextFieldProps> = ({
 }) => {
 
   return (
-    <section className={styles.TextField}>
+    <section className={`${styles.TextField}`}>
       <Font>{label}</Font>
-      <Input {...rest} />
+      <Input {...rest} error={error}/>
       {error&&<ErrorMsg error={error}/>}
     </section>
   )

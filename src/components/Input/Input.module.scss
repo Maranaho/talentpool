@@ -14,6 +14,7 @@
     &:hover { box-shadow: 0 0 0 1px $inputBorderHover inset }
     &:focus-within,
     &.focus { box-shadow: 0 0 0 2px $ocean inset }
+    &.hasError { box-shadow: 0 0 0 1px $error inset }
   }
   &:disabled {
     opacity: .3;
