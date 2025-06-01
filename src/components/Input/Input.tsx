@@ -16,16 +16,16 @@ export const Input:FC<InputProps> = ({
   disabled,
 }) => {
 
-  const [focus,setFocus] = useState<boolean>(false)
   return (  
-  <input
-    className={`${styles.Input} ${focus?styles.focus:""}`}
-    placeholder={placeholder}
-    value={value}
-    disabled={disabled}
-    onChange={onChange}
-    onFocus={()=>setFocus(true)}
-    onBlur={()=>setFocus(false)}
-  />
+  <article
+    className={styles.Input}
+  >
+     <input
+      placeholder={placeholder}
+      value={value}
+      disabled={disabled}
+      onChange={onChange}
+    />
+  </article>
 )
 }
