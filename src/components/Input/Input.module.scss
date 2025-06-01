@@ -1,0 +1,18 @@
+@import "../../ds-tokens.scss";
+
+.Input {
+  background: none;
+  border:none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px $inputBorder inset;
+  &:not(:disabled){
+    &:hover { box-shadow: 0 0 0 1px $inputBorderHover inset }
+    &.focus { box-shadow: 0 0 0 2px $ocean inset }
+  }
+  &:disabled {
+    opacity: .3;
+    cursor: not-allowed;
+  }
+}

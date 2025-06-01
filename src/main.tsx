@@ -1,12 +1,11 @@
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
-// import { App } from './App'
-import { Progress} from "./components/Progress"
+import { App } from './App'
+// import { Input} from "./components/Input"
 import './index.scss'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
-      {/* <App /> */}
-      <Progress value={30}/>
+      <App />
     </BrowserRouter>
 )
