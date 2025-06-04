@@ -18,7 +18,7 @@ export const DashBoard = () => {
         }
 
         if (!session) {
-          navigate('/signin')
+          navigate('/sign-in')
           return
         }
 
@@ -31,7 +31,7 @@ export const DashBoard = () => {
         setUser(userData)
       } catch (error) {
         console.error('Error:', error)
-        navigate('/signin')
+        navigate('/sign-in')
       } finally {
         setLoading(false)
       }
