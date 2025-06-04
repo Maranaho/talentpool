@@ -21,9 +21,9 @@ export const Icon:FC<IconProps> = ({
     <path
       d={paths[icon]}
       stroke={colors[color]}
-      stroke-width="1.6"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 )
