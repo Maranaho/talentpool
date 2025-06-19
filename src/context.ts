@@ -1,23 +1,38 @@
 import { createContext, type Dispatch } from "react"
 
-interface State {
-  selectedTrainer: string
+export interface User {
+  id: string
+  email: string
+  email_confirmed_at?: string
+  created_at?: string
+  last_sign_in_at?: string
+  photoURL: string
+  firstName: string
+  lastName: string
+  fullName: string
+  role?: string | null
+  provider: string
+  is_anonymous: boolean
 }
 
-type Action =
-  | { type: "SET_TRAINER"; payload: string }
+interface State {
+  selectedTrainer: string
+  user: User | null
+}
+
+type Action = { type: "SET_USER"; payload: User | null }
 
 const initialState: State = {
   selectedTrainer: "greyman",
+  user: null,
 }
 
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
-
-    case "SET_TRAINER":
+    case "SET_USER":
       return {
         ...state,
-        selectedTrainer: action.payload,
+        user: action.payload,
       }
 
     default:

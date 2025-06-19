@@ -1,26 +1,24 @@
-import photoURL from "../../assets/png/demi.png"
 import { Font } from "../Font"
 import styles from "./UserSum.module.scss"
+import { useUser } from '../../hooks/useUser'
+import { Avatar } from "../Avatar/Avatar"
 
-const user = {
-  photoURL,
-  firstName:"Demi",
-  lastName:"Fibernache",
-  role:"Senior Product Designer",
+export const UserSum = () => {
+  const { user } = useUser()
+
+  if (!user) {
+    return null
+  }
+
+  return (
+    <article className={styles.UserSum}>
+      <div>
+        <Avatar />
+      </div>
+      <div>
+        <Font variant="body3">{user.firstName} {user.lastName}</Font>
+        <Font>{user.role || 'Set your role'}</Font>
+      </div>
+    </article>
+  )
 }
-const { firstName, lastName, role } = user
-
-export const UserSum = () => (
-  <article className={styles.UserSum}>
-    <div>
-      <img
-        src={photoURL}
-        alt={`${firstName}_${lastName}`}
-      />
-    </div>
-    <div>
-      <Font variant="body3">{firstName} {lastName}</Font>
-      <Font>{role}</Font>
-    </div>
-  </article>
-)

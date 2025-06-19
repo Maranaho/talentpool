@@ -5,7 +5,7 @@ import { Auth } from '@supabase/auth-ui-react'
 import { ThemeSupa } from '@supabase/auth-ui-shared'
 import styles from './Signin.module.scss'
 import { Card } from '../Card'
-
+import logo from "../../assets/svg/logo.svg"
 export const Signin = () => {
   const navigate = useNavigate()
   const [isAuthenticated, setIsAuthenticated] = useState(false)
@@ -14,7 +14,7 @@ export const Signin = () => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setIsAuthenticated(!!session)
       if (session) {
-        navigate('/')
+        navigate('/dashboard')
       }
     })
 
@@ -23,7 +23,7 @@ export const Signin = () => {
     } = supabase.auth.onAuthStateChange((_event, session) => {
       setIsAuthenticated(!!session)
       if (session) {
-        navigate('/')
+        navigate('/dashboard')
       }
     })
 
@@ -46,16 +46,15 @@ export const Signin = () => {
 
   return (
     <section className={styles.Signin}>
-      <div className={styles.Signin__container}>
+        <figure><img src={logo} alt="logo" /></figure>
         <Card elevation="large">
           <Auth
             supabaseClient={supabase}
             appearance={{ theme: ThemeSupa }}
             providers={['google','linkedin_oidc']}
-            redirectTo={`${window.location.origin}/`}
-          />
+            redirectTo={`${window.location.origin}/dashboard`}
+            />
         </Card>
-      </div>
     </section>
   )
 } 
