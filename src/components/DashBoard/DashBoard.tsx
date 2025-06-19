@@ -51,13 +51,16 @@ export const DashBoard = () => {
   if (!user) {
     return null
   }
-console.log(user);
+
+  const handleSignOut = async () => {
+    await supabase.auth.signOut()
+    navigate('/sign-in')
+  }
 
   return (
     <div>
       <div>
         <h1>Welcome to your Dashboard</h1>
-        
         <div>
           {user.user_metadata?.avatar_url && (
             <img 
@@ -83,10 +86,7 @@ console.log(user);
           </div>
         </div>
 
-        <button
-          onClick={() => supabase.auth.signOut()}
-          
-        >
+        <button onClick={handleSignOut}>
           Sign Out
         </button>
       </div>

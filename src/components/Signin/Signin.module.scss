@@ -1,56 +1,15 @@
 @import '../../ds-tokens.scss';
 
 .Signin {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: $sky;
-  padding: 20px;
   flex:1;
 }
-
-.authContainer {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
-
-  h1 {
-    color: $black;
-    margin-bottom: 24px;
-    text-align: center;
-    font-size: 24px;
+.Signin__container {
+  width: 400px;
+  margin: 20vh auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > article {
+    width: 100%;
   }
-
-  :global {
-    .supabase-auth-ui_ui-container {
-      gap: 20px;
-    }
-
-    .supabase-auth-ui_ui-button {
-      width: 100%;
-      height: 40px;
-      border-radius: 6px;
-      font-weight: 500;
-    }
-
-    .supabase-auth-ui_ui-divider {
-      margin: 24px 0;
-    }
-
-    .supabase-auth-ui_ui-input {
-      border-radius: 6px;
-      border: 1px solid $inputBorder;
-      height: 40px;
-      padding: 8px 12px;
-
-      &:focus {
-        border-color: $marine;
-        outline: none;
-      }
-    }
-  }
-} 
+}

@@ -1,0 +1,13 @@
+@import '../../ds-tokens.scss';
+
+.Card {
+    border-radius: $radius-large;
+    padding: 16px;
+    box-shadow: $shadow-small;
+    &[data-elevation="medium"] {
+        box-shadow: $shadow-medium;
+    }
+    &[data-elevation="large"] {
+        box-shadow: $shadow-large;
+    }
+}
