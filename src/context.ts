@@ -1,5 +1,4 @@
-import { createContext, type Dispatch } from "react"
-
+import  { createContext, type Dispatch } from "react"
 export interface User {
   id: string
   email: string
@@ -16,25 +15,31 @@ export interface User {
 }
 
 interface State {
-  selectedTrainer: string
-  user: User | null
+  selectedCountry: string
+  countrySearchValue: string
 }
 
-type Action = { type: "SET_USER"; payload: User | null }
+type Action =
+{ type: "SET_COUNTRY"; payload: string } |
+{ type: "SET_COUNTRY_SEARCH_VALUE"; payload: string }  
 
 const initialState: State = {
-  selectedTrainer: "greyman",
-  user: null,
+  selectedCountry: "GBR",
+  countrySearchValue: "",
 }
 
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
-    case "SET_USER":
+    case "SET_COUNTRY":
       return {
         ...state,
-        user: action.payload,
+        selectedCountry: action.payload,
       }
-
+    case "SET_COUNTRY_SEARCH_VALUE":
+      return {
+        ...state,
+        countrySearchValue: action.payload,
+      }
     default:
       return state
   }

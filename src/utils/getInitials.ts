@@ -5,7 +5,6 @@ export const getInitials = (firstName: string, lastName: string): string => {
   return `${firstInitial}${lastInitial}`
 }
 
-// Alternative version that takes a full name string
 export const getInitialsFromFullName = (fullName: string): string => {
   if (!fullName) return ''
   

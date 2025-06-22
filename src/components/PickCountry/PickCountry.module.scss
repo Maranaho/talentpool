@@ -1,0 +1,14 @@
+.PickCountry {
+  width: 100vw;
+  h1 {
+    font-size: 3em;
+    text-align: center;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 100px 0 50px;
+}

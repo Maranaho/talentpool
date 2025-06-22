@@ -36,11 +36,11 @@ export const Signin = () => {
   }
 
   if (isAuthenticated) {
-    return (
-      <div className={styles.Signin}>
+  return (
+    <div className={styles.Signin}>
         <h2>You are signed in!</h2>
         <button onClick={handleSignOut}>Sign Out</button>
-      </div>
+    </div>
     )
   }
 

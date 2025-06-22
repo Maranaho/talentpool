@@ -23,7 +23,6 @@ export const Avatar = () => {
           src={user.photoURL} 
           alt={`${user.firstName} ${user.lastName}`}
           onError={handleImageError}
-          onLoad={() => console.log('Image loaded successfully:', user.photoURL)}
         />
       ) : (
         <Font variant="body3">{getInitialsFromFullName(user.fullName)}</Font>

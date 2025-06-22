@@ -3,12 +3,19 @@
 .Input {
   border-radius: 10px;
   box-shadow: 0 0 0 1px $inputBorder inset;
-  padding: 10px;
+  
+  &.large {
+    border-radius: 50px;
+    > input {
+      padding: 30px;
+      width: 100%;
+    }
+  }
   > input {
+    padding: 10px;
     background: none;
     border:none;
     outline: none;
-    padding: 0;
   }
   &:not(:disabled){
     &:hover { box-shadow: 0 0 0 1px $inputBorderHover inset }
