@@ -1,4 +1,6 @@
 import  { createContext, type Dispatch } from "react"
+import { continents } from "./types"
+
 export interface User {
   id: string
   email: string
@@ -14,13 +16,15 @@ export interface User {
   is_anonymous: boolean
 }
 
+export type CountryCode = typeof continents[keyof typeof continents]['countries'][number]['code']
+
 interface State {
-  selectedCountry: string
+  selectedCountry: CountryCode
   countrySearchValue: string
 }
 
 type Action =
-{ type: "SET_COUNTRY"; payload: string } |
+{ type: "SET_COUNTRY"; payload: CountryCode } |
 { type: "SET_COUNTRY_SEARCH_VALUE"; payload: string }  
 
 const initialState: State = {

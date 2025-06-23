@@ -15,7 +15,7 @@ export const SearchCountry = ()=>{
     <div className={styles.SearchCountry}>
       <Input
         type="search"
-        placeholder="Search for your dream place..."
+        placeholder="Search by city, country or continent..."
         onChange={handleChange}
         value={countrySearchValue}
         id="search-country"

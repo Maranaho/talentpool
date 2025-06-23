@@ -1,4 +1,4 @@
-@import '../../ds-tokens.scss';
+@use '../../ds-tokens.scss' as *;
 
 .Avatar {
   width: 60px;

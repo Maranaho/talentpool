@@ -1,4 +1,4 @@
-@import '../../ds-tokens.scss';
+@use '../../ds-tokens.scss' as *;
 
 .Card {
     border: none;
@@ -10,15 +10,20 @@
     
     &.btn { 
         cursor: pointer;
-        
+        position: relative;
         &:hover {
             box-shadow: 0 0 0 1px $inputBorderHover inset;
         }
         
-        &:focus,
-        &:focus-visible {
-            box-shadow: 0 0 0 2px $ocean inset;
+        &.selected {
+            box-shadow: 0 0 0 1px $ocean inset;
+            background: $lightSky;
             outline: none;
+        }
+        > svg {
+            position: absolute;
+            top: 16px;
+            right: 16px;
         }
     }
     

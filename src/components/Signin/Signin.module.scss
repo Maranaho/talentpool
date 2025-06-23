@@ -1,4 +1,4 @@
-@import '../../ds-tokens.scss';
+@use '../../ds-tokens.scss' as *;
 
 .Signin {
   flex: 1;

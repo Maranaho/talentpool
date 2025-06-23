@@ -13,7 +13,18 @@ export const searchCountries = (searchTerm: string) => {
   }> = []
 
   Object.entries(continents).forEach(([continentKey, continent]) => {
+    const continentMatches = continent.name.toLowerCase().includes(normalizedSearch)
+    
     continent.countries.forEach(country => {
+      if (continentMatches) {
+        results.push({
+          code: country.code,
+          name: country.name,
+          continent: continentKey
+        })
+        return
+      }
+
       if (country.name.toLowerCase().includes(normalizedSearch)) {
         results.push({
           code: country.code,

@@ -3,15 +3,15 @@ import styles from './CountryPicker.module.scss'
 import { Card } from "../Card"
 import { Font } from "../Font"
 import { useContext } from "react"
-import { TalentPoolContext } from "../../context"
+import { TalentPoolContext, type CountryCode } from "../../context"
 import { searchCountries } from "../../utils/searchCountries"
 
 export const CountryPicker = () => {
 
-  const { state:{countrySearchValue} } = useContext(TalentPoolContext)
+  const { state:{countrySearchValue, selectedCountry}, dispatch } = useContext(TalentPoolContext)
 
-  const handleCountryClick = (countryCode: string) => {
-    console.log(countryCode)
+  const handleCountryClick = (countryCode: CountryCode) => {
+    dispatch({type: "SET_COUNTRY", payload: countryCode})
   }
 
   const searchResults = searchCountries(countrySearchValue)
@@ -76,6 +76,7 @@ export const CountryPicker = () => {
                   <Card
                     key={code}
                     onClick={()=>handleCountryClick(code)}
+                    selected={selectedCountry === code}
                   >
                     <Font variant="body3">{highlightMatch(name, countrySearchValue)}</Font>
                     {matchingCities.length > 0 && (
